@@ -1,0 +1,614 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "reactor-class-1",
+      "match": { "objects": [ "INFO_Reactor_Class_I" ] },
+      "dontCut": true,
+      "summary": "The ship's reactor and the most valuable thing aboard. It starts melting down the moment it is separated from its mounting.",
+      "actions": [
+        "Watch its stability on the HUD once the meltdown starts",
+        "Use the Scanner's Systems Mode to see what it is connected to"
+      ],
+      "dismantle": [
+        "Before touching it, clear a wide, straight path from the reactor to the Barge.",
+        "Strip the ship's power and coolant systems first - that leaves the reactor more stable when it goes.",
+        "A Class I reactor slides out of its coolant casing with a firm Grapple pull.",
+        "Move it straight into the {destination} before its stability runs out."
+      ],
+      "warnings": [
+        "Separating it from its mounting starts a meltdown you cannot stop.",
+        "If stability reaches zero it explodes violently."
+      ],
+      "tips": [
+        "On some ships the reactor controls sit behind a locked terminal; a Utility Key opens it."
+      ]
+    },
+    {
+      "id": "reactor-class-2",
+      "match": { "objects": [ "INFO_Reactor_Class_II" ] },
+      "dontCut": true,
+      "summary": "A Class II reactor. Hugely valuable, but it starts melting down as soon as it is disconnected.",
+      "actions": [
+        "Watch its stability on the HUD once the meltdown starts",
+        "Use the Scanner's Systems Mode to see what it is connected to"
+      ],
+      "dismantle": [
+        "Clear a wide path from the reactor to the Barge before anything else.",
+        "Release the reactor's connection to the thrusters.",
+        "Remove the coolant at the ship's ECU. Doing both of these steps gives you the slowest meltdown.",
+        "Strip the ship's power and coolant systems for extra stability.",
+        "Free the reactor and move it straight into the {destination} before its stability runs out."
+      ],
+      "warnings": [
+        "Separating it from its mounting starts a meltdown you cannot stop.",
+        "If stability reaches zero it explodes violently."
+      ],
+      "tips": [
+        "On some ships the reactor and thruster controls sit behind a locked terminal; a Utility Key opens it."
+      ]
+    },
+    {
+      "id": "reactor-mounting",
+      "match": { "objects": [ "INFO_Reactor_Plate_Class_I", "INFO_Reactor_Plate_Class_II", "INFO_Reactor_Machine_Part" ] },
+      "summary": "Reactor housing and mounting hardware. Valuable structure for the Processor - the reactor core itself goes to the Barge.",
+      "dismantle": [
+        "Leave it in place until the reactor core is out and in the Barge.",
+        "Then cut it free with the {tools} and send it to the {destination}."
+      ],
+      "warnings": [
+        "Cutting the housing while the core is still mounted can disconnect the reactor and start its meltdown."
+      ]
+    },
+    {
+      "id": "power-generator",
+      "match": { "objects": [ "INFO_PowerGenerator" ] },
+      "summary": "Powers the ship. It stays live until every fuse connected to it has been pulled.",
+      "actions": [
+        "Use the Scanner's Systems Mode to find its fuses"
+      ],
+      "dismantle": [
+        "Find every fuse. Red lights around the generator mean fuses are still connected.",
+        "Pull each fuse only while its indicator lights are all off.",
+        "When the last fuse is out the generator powers down safely.",
+        "Cut it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Cutting or pulling it free while it is still live is dangerous."
+      ],
+      "tips": [
+        "Every fuse you pull makes the remaining fuses cycle faster - stay ready."
+      ]
+    },
+    {
+      "id": "fuse",
+      "match": { "objects": [ "INFO_Prop_Fuse" ] },
+      "dontCut": true,
+      "summary": "One of the power generator's fuses. Its lights blink in a cycle; it is only safe to pull while they are all off.",
+      "actions": [
+        "Pull the release lever while the lights are off"
+      ],
+      "dismantle": [
+        "Watch the indicator lights next to it.",
+        "The moment all of them are off, pull the release lever.",
+        "Collect the fuse by hand."
+      ],
+      "warnings": [
+        "Pulling it while any light is on gives you an electric jolt."
+      ],
+      "tips": [
+        "Every fuse you pull makes the remaining fuses cycle faster."
+      ]
+    },
+    {
+      "id": "breaker-lights",
+      "match": { "objects": [ "INFO_Prop_Breaker_Lights" ] },
+      "summary": "Indicator lights for a generator fuse. While any of them are lit, the fuse is still live.",
+      "dismantle": [
+        "Leave them alone until their fuse has been pulled.",
+        "Then salvage them in the {destination}."
+      ]
+    },
+    {
+      "id": "fuel-container",
+      "match": { "objects": [ "INFO_FuelTank", "INFO_FuelCanister", "INFO_Resource_Fuel_L", "INFO_Resource_Fuel_S" ] },
+      "dontCut": true,
+      "summary": "Holds ship fuel. Valuable intact, dangerous when damaged.",
+      "dismantle": [
+        "Never cut into the tank itself.",
+        "Free it by cutting its mounts, connections or cut points.",
+        "Move it gently - hard impacts and fire can set it off.",
+        "Deliver it to the {destination}."
+      ],
+      "warnings": [
+        "Cutting, burning or slamming it can ignite the fuel."
+      ],
+      "tips": [
+        "Keep it away from fires and arcing electrics while you move it."
+      ]
+    },
+    {
+      "id": "fuel-pipe",
+      "match": { "objects": [ "INFO_FuelPipe", "INFO_PipeJunctionBox" ] },
+      "summary": "Carries fuel around the ship. A cut line sprays combustible fuel.",
+      "dismantle": [
+        "Cut it at its ends or mounts rather than through the middle.",
+        "Make sure nothing nearby is burning or arcing first.",
+        "Send it to the {destination}."
+      ],
+      "warnings": [
+        "Leaking fuel catches fire easily."
+      ]
+    },
+    {
+      "id": "thruster-fuel-pickup",
+      "match": { "objects": [ "INFO_Pickup_ThrusterFuel" ] },
+      "summary": "Fuel for your suit thrusters. Grab it to top up."
+    },
+    {
+      "id": "thruster-fuel-damaged",
+      "match": { "objects": [ "INFO_Pickup_ThrusterFuel_Damaged" ] },
+      "summary": "A damaged fuel pickup. It is no use to you any more - dispose of it in the Furnace."
+    },
+    {
+      "id": "oxygen-pickup",
+      "match": { "objects": [ "INFO_Pickup_O2_S" ] },
+      "summary": "Oxygen for your suit. Grab it to top up."
+    },
+    {
+      "id": "utility-key",
+      "match": { "objects": [ "INFO_Pickup_UtilityKey" ] },
+      "summary": "Unlocks restricted terminals - on some ships those control the reactor and thrusters."
+    },
+    {
+      "id": "coolant-container",
+      "match": { "objects": [ "INFO_CryoTank", "INFO_CryoCanister", "INFO_CryoJunction", "INFO_Resource_Cryo_L", "INFO_Resource_Cryo_S" ] },
+      "dontCut": true,
+      "summary": "Holds coolant. Worth salvaging intact.",
+      "dismantle": [
+        "Don't cut into it.",
+        "Free it at its mounts and connections.",
+        "Deliver it to the {destination}."
+      ],
+      "warnings": [
+        "A ruptured coolant container sprays freezing coolant. Frozen things turn brittle and can shatter."
+      ],
+      "tips": [
+        "Coolant puts out fires and neutralizes radiation - a leak can occasionally work in your favour."
+      ]
+    },
+    {
+      "id": "coolant-pipe",
+      "match": { "objects": [ "INFO_CryoPipe" ] },
+      "summary": "Carries coolant around the ship. Leaks if cut.",
+      "dismantle": [
+        "Cut it at its ends or mounts and stay out of the spray.",
+        "Send it to the {destination}."
+      ],
+      "tips": [
+        "Dismantling the ship's ECU stops a coolant leak that is getting out of hand."
+      ]
+    },
+    {
+      "id": "ecu",
+      "match": { "objects": [ "INFO_ECU" ] },
+      "summary": "Environmental Control Unit. Runs the ship's coolant, pressure and air filtering.",
+      "dismantle": [
+        "Pull out its EC Unit modules (Cryo, Filter, Pressurization) - each one is salvage on its own.",
+        "Removing the Cryo module can flood connected systems with coolant, so stand clear of coolant lines.",
+        "Cut the ECU free and send it to the {destination}."
+      ],
+      "tips": [
+        "Dismantling the ECU stops runaway coolant leaks.",
+        "Removing the coolant here before freeing a Class II reactor gives it a slower meltdown."
+      ]
+    },
+    {
+      "id": "ecu-terminal",
+      "match": { "objects": [ "INFO_Terminal_ECU" ] },
+      "summary": "Control terminal for the Environmental Control Unit.",
+      "dismantle": [
+        "Use any interactions you need first.",
+        "Cut it free and send it to the {destination}."
+      ]
+    },
+    {
+      "id": "ec-cryo",
+      "match": { "objects": [ "INFO_Tech_Cryo" ] },
+      "summary": "The ECU's coolant module.",
+      "dismantle": [
+        "Stand clear of coolant pipes before you pull it.",
+        "Pull it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Removing it can flood connected systems with coolant."
+      ]
+    },
+    {
+      "id": "ec-pressure",
+      "match": { "objects": [ "INFO_Tech_Pressure" ] },
+      "summary": "The ECU's pressurization module. Atmosphere Regulators depend on it.",
+      "dismantle": [
+        "Depressurize rooms with their Atmosphere Regulators before you touch it.",
+        "Pull it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "If this module is damaged, Atmosphere Regulators stop working."
+      ]
+    },
+    {
+      "id": "ec-filter",
+      "match": { "objects": [ "INFO_Tech_Filter" ] },
+      "summary": "The ECU's air filter module.",
+      "dismantle": [
+        "Pull it free and send it to the {destination}."
+      ]
+    },
+    {
+      "id": "atmosphere-regulator",
+      "match": { "objects": [ "INFO_AtmosphereRegulator" ] },
+      "summary": "Controls a room's air pressure. Use it to vent the room safely before you cut into it.",
+      "actions": [
+        "Use it to depressurize the room"
+      ],
+      "dismantle": [
+        "Use it to depressurize the room first.",
+        "Then cut it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Some regulators are damaged and won't work. Then open the room from outside while standing clear of the breach."
+      ]
+    },
+    {
+      "id": "thruster",
+      "match": { "objects": [ "INFO_Thruster_Class_I", "INFO_Thruster_Class_II" ] },
+      "dontCut": true,
+      "summary": "A fuel-fed main thruster. Valuable, and explosive if you cut it wrong.",
+      "dismantle": [
+        "Remove the Thruster Cap or access panel to expose the internal cut points.",
+        "Cut those cut points with the Stinger - never cut the thruster body.",
+        "Pull it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Cutting into the thruster body can make it explode."
+      ]
+    },
+    {
+      "id": "thruster-cover",
+      "match": { "objects": [ "INFO_ThrusterCap", "INFO_AccessPanel" ] },
+      "summary": "A cover over a thruster's internal cut points.",
+      "dismantle": [
+        "Remove it to reach the cut points underneath.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "quasar-thruster",
+      "match": { "objects": [ "INFO_Thruster_Engine" ] },
+      "dontCut": true,
+      "summary": "Quasar Thruster. Fragile and volatile, but it can be separated from its fuel source.",
+      "dismantle": [
+        "Separate it from its fuel source first.",
+        "Handle it gently - it breaks easily.",
+        "Send it to the {destination}."
+      ],
+      "warnings": [
+        "Volatile: don't cut it or knock it around."
+      ]
+    },
+    {
+      "id": "fuel-injector",
+      "match": { "objects": [ "INFO_Thruster_Class_X_Fuel_Injector", "INFO_Thruster_Class_X_Fuel_Injector_CoverPlate" ] },
+      "summary": "Feeds fuel into a thruster.",
+      "dismantle": [
+        "Treat it as a fuel part: make sure nothing nearby is burning or arcing.",
+        "Free it at its mounts with the {tools} and send it to the {destination}."
+      ]
+    },
+    {
+      "id": "thruster-nozzle",
+      "match": { "objects": [ "INFO_ThrusterNozzle" ] },
+      "summary": "Thruster nozzle. It comes off by cutting through the external chassis that holds it.",
+      "dismantle": [
+        "Cut it away through the surrounding external chassis.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "nacelle",
+      "match": { "objects": [ "INFO_Nacell", "INFO_NacellDouble" ] },
+      "summary": "An engine nacelle mounted on the hull.",
+      "dismantle": [
+        "Look for its connections inside the hull as well as outside.",
+        "Cut it loose at its cut points and send it to the {destination}."
+      ],
+      "tips": [
+        "On some Mackerel ships the nacelles can only be disconnected from inside the hull."
+      ]
+    },
+    {
+      "id": "power-storage",
+      "match": { "objects": [ "INFO_Powercell", "INFO_Capacitor", "INFO_BatteryPack", "INFO_SolarBattery", "INFO_Resource_Battery" ] },
+      "summary": "Stores power. While it is intact, the ship's electrical systems can stay live.",
+      "dismantle": [
+        "Remove it early - fewer systems stay powered once it is gone.",
+        "Pull it free gently and send it to the {destination}."
+      ],
+      "warnings": [
+        "It can arc when removed, hit or damaged."
+      ]
+    },
+    {
+      "id": "power-distribution",
+      "match": { "objects": [ "INFO_PowerJunctionBox", "INFO_PowerStation", "INFO_ElectricJunction", "INFO_ElectricCable", "INFO_Wires" ] },
+      "summary": "Distributes power through the ship.",
+      "dismantle": [
+        "Check Systems Mode for what feeds it and remove those power sources first.",
+        "Cut it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "While the ship has power it can arc and briefly electrify nearby metal."
+      ]
+    },
+    {
+      "id": "terminal",
+      "match": { "objects": [ "INFO_Terminal_Standard", "INFO_Terminal_Flight", "INFO_Terminal_Nav", "INFO_Prop_WallTerminal", "INFO_Prop_BedTerminal", "INFO_ConsoleEngineering", "INFO_ConsoleDoor", "INFO_AirlockConsole", "Info_TerminalControls", "Info_TerminalMonitor" ] },
+      "summary": "A ship terminal. Some have interactions - open doors, read logs or unlock systems.",
+      "dismantle": [
+        "Use any interactions you need first; once it is cut free it stops working.",
+        "Cut it free at its mounts and send it to the {destination}."
+      ],
+      "tips": [
+        "Locked terminals that control reactors and thrusters open with a Utility Key."
+      ]
+    },
+    {
+      "id": "door",
+      "match": { "objects": [ "INFO_Door", "INFO_CargoHatch" ] },
+      "summary": "A powered door. It only opens while the ship has power.",
+      "dismantle": [
+        "Open it while the ship still has power if you need to get through.",
+        "Check whether it seals a pressurized room before you cut it.",
+        "Cut it free and send it to the {destination}."
+      ]
+    },
+    {
+      "id": "airlock",
+      "match": { "objects": [ "INFO_AirlockInterior", "INFO_AirlockAerobridge" ] },
+      "summary": "Part of the ship's airlock.",
+      "dismantle": [
+        "Check whether the rooms behind it are still pressurized.",
+        "Depressurize them with their Atmosphere Regulator first.",
+        "Cut it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Airlocks usually separate pressurized rooms from space."
+      ]
+    },
+    {
+      "id": "glass",
+      "match": { "objects": [ "INFO_Glass", "INFO_Canopy" ] },
+      "summary": "Windows and canopies go to the Furnace.",
+      "dismantle": [
+        "Depressurize the room behind it first.",
+        "Cut it free and send it to the {destination}."
+      ],
+      "warnings": [
+        "Glass often seals a pressurized room - breaking it causes a decompression."
+      ]
+    },
+    {
+      "id": "panel-nanocarbon",
+      "match": { "objects": [ "INFO_Panel_Nanocarbon", "INFO_Structural_Beam_Nanocarbon", "INFO_Nanocarbon" ] },
+      "summary": "Nanocarbon. High-value structure that only enhanced cutting gear gets through.",
+      "dismantle": [
+        "Check that it doesn't seal a pressurized room.",
+        "If your cutter's grade is too low, free it by cutting the parts around it.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "panel",
+      "match": { "objects": [ "INFO_Panel_Aluminum", "INFO_Panel_Titanium", "INFO_ArmourPlates" ] },
+      "summary": "Hull plating. Its salvage destination depends on the material.",
+      "dismantle": [
+        "Check that it doesn't seal a pressurized room.",
+        "Cut it free with the {tools}.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "frame",
+      "match": { "objects": [ "INFO_Structural_Beam_Aluminum", "INFO_Structural_Beam_Titanium", "INFO_Structural_Keel_Titanium" ] },
+      "summary": "Load-bearing frame.",
+      "dismantle": [
+        "Cut it free with the {tools}.",
+        "Send it to the {destination}."
+      ],
+      "tips": [
+        "Cutting frame can release large sections at once - watch where they drift."
+      ]
+    },
+    {
+      "id": "cut-point",
+      "match": { "objects": [ "INFO_CutPoint_Grade0", "INFO_CutPoint_Grade1", "INFO_CutPoint_Grade2" ] },
+      "summary": "A cut point holding parts together. Cut it and they come apart.",
+      "dismantle": [
+        "Aim the Stinger at it and hold until it breaks.",
+        "If its grade is above your cutter's, look for another way to free the part."
+      ],
+      "tips": [
+        "Release the Stinger now and then so it doesn't overheat."
+      ]
+    },
+    {
+      "id": "clamp",
+      "match": { "objects": [ "INFO_CutPoint_Clamp" ] },
+      "summary": "A clamp holding parts together. Cut it to release them.",
+      "dismantle": [
+        "Cut it with the Stinger."
+      ]
+    },
+    {
+      "id": "cut-guard",
+      "match": { "objects": [ "INFO_CutGuardPatchFoam" ] },
+      "summary": "Cut Guard foam protects whatever is underneath from being cut.",
+      "dismantle": [
+        "Break it first - it shatters on impact or from a charged Grapple push.",
+        "Then cut the part underneath."
+      ]
+    },
+    {
+      "id": "storage",
+      "match": { "objects": [ "INFO_CargoContainer", "INFO_Crate_Shipping", "INFO_Crate_Hard", "INFO_Crate_Soft", "INFO_StorageBin", "INFO_Storage", "INFO_CockpitStorage" ] },
+      "summary": "Storage. Often heavy.",
+      "dismantle": [
+        "Cut it from its mounts.",
+        "Use Tethers for heavy ones - they pull harder than the Grapple and can be stacked.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "fuel-clamp",
+      "match": { "objects": [ "INFO_PodClampFuelClamp" ] },
+      "summary": "Holds a fuel pod. It cannot be taken apart in the Bay.",
+      "dismantle": [
+        "Don't try to take it apart - cut it free in one piece.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "radiation-containment-unit",
+      "match": { "objects": [ "INFO_RadiationContainmentUnit" ] },
+      "summary": "Radiation Containment Unit. It houses a fragile, radioactive filter.",
+      "dismantle": [
+        "Remove its access panel to reach the Radiation Filter.",
+        "Take the filter out gently and get it to the Barge.",
+        "Then cut the unit free and send it to the {destination}."
+      ]
+    },
+    {
+      "id": "radiation-containment-door",
+      "match": { "objects": [ "INFO_RadiationContainmentUnitDoor" ] },
+      "summary": "Access panel covering a Radiation Filter.",
+      "dismantle": [
+        "Remove it to reach the filter behind it.",
+        "Send it to the {destination}."
+      ]
+    },
+    {
+      "id": "space-truck-part",
+      "match": { "objects": [ "INFO_SpaceTruck_AirPurificationFilter", "INFO_SpaceTruck_CircuitBoard", "INFO_SpaceTruck_Dampener", "INFO_SpaceTruck_Distributor", "INFO_SpaceTruck_Fuse", "INFO_SpaceTruck_HeatSink", "INFO_SpaceTruck_Hydraulic", "INFO_SpaceTruck_IonCoil", "INFO_SpaceTruck_RodTube", "INFO_SpaceTruck_Wires" ] },
+      "summary": "A Space Truck part. Handle it carefully and bring it back in one piece."
+    },
+    {
+      "id": "radiation-filter",
+      "match": { "objects": [ "INFO_RadiationFilter" ] },
+      "summary": "Fragile and radioactive.",
+      "dismantle": [
+        "Handle it gently - it breaks easily.",
+        "Keep it away from yourself and anything organic.",
+        "Deliver it to the {destination}."
+      ]
+    },
+    {
+      "id": "hazard-explosive",
+      "match": { "hazards": [ "Explosive" ] },
+      "warnings": [
+        "Explosive: cutting, burning or hitting it hard can set it off."
+      ],
+      "tips": [
+        "Coolant can neutralize an explosive object."
+      ]
+    },
+    {
+      "id": "hazard-flammable",
+      "match": { "hazards": [ "Flammable", "IgnitesFromElectricity" ] },
+      "warnings": [
+        "Flammable: fire spreads quickly between flammable objects."
+      ],
+      "tips": [
+        "Coolant puts fires out."
+      ]
+    },
+    {
+      "id": "hazard-leakable",
+      "match": { "hazards": [ "Leakable" ] },
+      "warnings": [
+        "Cutting into it starts a leak."
+      ]
+    },
+    {
+      "id": "hazard-electrical",
+      "match": { "hazards": [ "Electrifiable", "ElectricitySource" ] },
+      "warnings": [
+        "Can arc when removed, hit or damaged, briefly electrifying nearby metal."
+      ],
+      "tips": [
+        "The Scanner's Systems Mode shows wires, junction boxes and power sources."
+      ]
+    },
+    {
+      "id": "hazard-radioactive",
+      "match": { "hazards": [ "Radioactive", "Irradiated" ] },
+      "warnings": [
+        "Radiation hurts you and damages organic material."
+      ],
+      "tips": [
+        "Coolant neutralizes radiation."
+      ]
+    },
+    {
+      "id": "hazard-pressure",
+      "match": { "hazards": [ "SealsPressurizedRoom" ] },
+      "warnings": [
+        "A violent decompression flings loose objects toward the breach."
+      ],
+      "tips": [
+        "The Scanner shows which rooms are still pressurized."
+      ]
+    },
+    {
+      "id": "hazard-frozen",
+      "match": { "hazards": [ "Frozen" ] },
+      "tips": [
+        "Frozen objects are brittle - a hard hit can shatter them."
+      ]
+    },
+    {
+      "id": "category-furniture",
+      "match": { "categories": [ "Furniture_CategoryAsset" ] },
+      "summary": "Furniture. Usually harmless - cut it from its mounts."
+    },
+    {
+      "id": "category-structural",
+      "match": { "categories": [ "Structural_CategoryAsset" ] },
+      "summary": "Ship structure."
+    },
+    {
+      "id": "category-cargo",
+      "match": { "categories": [ "Cargo_CategoryAsset", "Storage_CategoryAsset" ] },
+      "summary": "Cargo or storage. Often heavy - Tethers help."
+    },
+    {
+      "id": "category-electrical",
+      "match": { "categories": [ "Electrical_CategoryAsset", "Wires_CategoryAsset" ] },
+      "summary": "Part of the ship's electrical system."
+    },
+    {
+      "id": "category-thruster",
+      "match": { "categories": [ "Thruster_CategoryAsset", "Engine_CategoryAsset" ] },
+      "summary": "Part of the propulsion system. Expect fuel nearby."
+    },
+    {
+      "id": "category-ecu",
+      "match": { "categories": [ "ECU_CategoryAsset" ] },
+      "summary": "Part of the Environmental Control Unit."
+    },
+    {
+      "id": "category-pickup",
+      "match": { "categories": [ "PickUp_CategoryAsset", "RepairKit_CategoryAsset", "SpareParts_CategoryAsset", "Data_CategoryAsset" ] },
+      "summary": "A consumable or collectible. Grab it by hand."
+    }
+  ]
+}

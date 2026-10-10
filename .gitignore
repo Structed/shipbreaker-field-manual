@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.zip
+# Game data dumps (contain the game's own text) must never be committed.
+catalog/
+catalog*.json
+catalog*.txt
